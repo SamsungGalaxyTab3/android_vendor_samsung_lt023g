@@ -212,7 +212,7 @@
              <PictureSize width="640" height="480"/>
              <PictureSize width="1280" height="720"/>
 	     <PictureSize width="1280" height="960"/>
-	     <PictureSize width="1536" height="864"/>
+			<PictureSize width="1536" height="864"/>
              <PictureSize width="1600" height="1200"/>
 	     <PictureSize width="2048" height="1152"/>
              <PictureSize width="2048" height="1536"/>
@@ -238,10 +238,13 @@
 	     <PreviewSize width="640" height="480" />
          </PreviewConfig>
          <PictureConfig>
+             <!--PictureFormat format="jpeg"/-->
              <PictureSize width="640" height="480"/>
              <PictureSize width="1280" height="960"/>
          </PictureConfig>
          <VideoRecordingConfig>
+             <!--VideoSize width="1280" height="720"/-->
+             <!--VideoFormat format="yuv420sp"/-->
          </VideoRecordingConfig>
      </CamConfig>
 </CamProfiles>

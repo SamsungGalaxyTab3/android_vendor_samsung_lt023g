@@ -11,8 +11,6 @@
     <AudioComponent>DELAY</AudioComponent>
     <AudioComponent>MODEM</AudioComponent>
     <AudioComponent>SW</AudioComponent>
-    <AudioComponent>CODEC</AudioComponent>
-    <AudioComponent>PMIC</AudioComponent>
   </AudioComponents>
   <ControlProtocols>
     <Protocol>I2C</Protocol>
@@ -192,11 +190,7 @@
       <Bits range="7:0" field="PDM_CTRL_PATT_MSB[7:0]" default="00000000" desc="Value of MSB bits of control pattern. This register is effective only when 16-bit control patterns are selected. Otherwise LSB only are issued." />
     </RegisterInfo>
     <RegisterInfo index="0x25" name="PDM Control Register 3">
-      <Bits range="7:0" field="PDM_CTRL_PATT_LSB[7:0]" default="00000000" type="Gain" desc="Value of LSB bits of control pattern. When 8-bit control patterns are selected, only this register is issued.">
-        <Capbility value="0xD4" decibel="-3" />
-        <Capbility value="0xAA" decibel="0" />
-        <Capbility value="0xD8" decibel="3" />
-      </Bits>
+      <Bits range="7:0" field="PDM_CTRL_PATT_LSB[7:0]" default="00000000" desc="Value of LSB bits of control pattern. When 8-bit control patterns are selected, only this register is issued." />
     </RegisterInfo>
     <RegisterInfo index="0x26" name="Headphone Settings">
       <Bits range="7" field="HP2_HIZ" default="0" desc="Headphone 2 amplifier tristate command (automatically set in case of short detection) 0 = Active output 1 = HiZ output" />
@@ -752,22 +746,22 @@
     </RegisterInfo>
     <RegisterInfo index="0x56" name="Volume Selection on Channel 1">
       <Bits range="7:0" field="VOL_SEL_1[7:0]" default="0" type="Gain" desc="Volume selector on SDM 1 channel (target volume if volume ramp is selected)" >
-        <Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
+      	<Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
       </Bits>
     </RegisterInfo>
     <RegisterInfo index="0x57" name="Volume Selection on Channel 2">
       <Bits range="7:0" field="VOL_SEL_2[7:0]" default="0" type="Gain" desc="Volume selector on SDM 2 channel (target volume if volume ramp is selected)" >
-        <Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
+      	<Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
       </Bits>
     </RegisterInfo>
     <RegisterInfo index="0x58" name="Volume Selection on Channel 3">
       <Bits range="7:0" field="VOL_SEL_3[7:0]" default="0" type="Gain" desc="Volume selector on PDM 1 channel (target volume if volume ramp is selected)" >
-        <Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
+      	<Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
       </Bits>
     </RegisterInfo>
     <RegisterInfo index="0x59" name="Volume Selection on Channel 4">
       <Bits range="7:0" field="VOL_SEL_4[7:0]" default="0" type="Gain" desc="Volume selector on PDM 2 channel (target volume if volume ramp is selected)" >
-        <Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
+      	<Capbility range="0x01~0xff" dbrange="-91.0~36.0" step="0.5" />
       </Bits>
     </RegisterInfo>
   </Component>
@@ -934,9 +928,9 @@
         <Capbility value="0x31" decibel="12" />
       </Bits>
     </RegisterInfo>
-    <!-- Digital gain in modem for extra wb -->
-    <RegisterInfo index="0x00" name="Digital Gain for WB extra in Modem">
-      <Bits range="7:0" field="DIGITAL_GAIN_WB_EXTRA" default="00101110" type="Gain" desc="Increase/Decrease voice stream volume">
+    <!-- Digital gain in modem for extra Wb -->
+    <RegisterInfo index="0x00" name="Digital Gain for extra WB in Modem">
+      <Bits range="7:0" field="DIGITAL_GAIN_EXTRA_WB" default="00101110" type="Gain" desc="Increase/Decrease voice stream volume">
         <Capbility value="0x01" decibel="-36" />
         <Capbility value="0x02" decibel="-35" />
         <Capbility value="0x03" decibel="-34" />
@@ -998,41 +992,46 @@
   </Component>
   <Component identifier="GPIO_PORT">
     <GPIOInfo>
-      <GPIO name="GPIO1" port="1" desc="control 1" />
-      <GPIO name="GPIO2" port="2" desc="control 2" />
+      <GPIO name="GPIO5" port="5" desc="HP mute for Dock control" />
     </GPIOInfo>
   </Component>
-  <Component identifier="PMIC">
+  <Component identifier="USTICA">
     <RegisterInfo index="0x48" name="Class D Register 1">
-      <Bits range="7:4" field="PDM_DDLY" default="0000" desc="This field introduces a programalbe delay in 1ns increments on the PDM_SDA data line before it is sampled internally by the selected PDM_CLK edge" />
-      <Bits range="3" field="RSVD" default="0" desc="Reserved" />
-      <Bits range="2" field="PONZA_LR_POL" default="0" desc="This field selects the sampling edge of the PDM_CLK used by the 88PM822 to sample the PDM_SDA stream." />
-      <Bits range="1" field="CLASSD_DIG_EN" default="0" desc="Update me." />
+      <Bits range="7:5" field="PDM_DDLY" default="000" desc="This field introduces a programalbe delay in 1ns increments on the PDM_SDA data line before it is sampled internally by the selected PDM_CLK edge" />
+      <Bits range="4" field="RSVD" default="0" desc="RSVD" />
+      <Bits range="3" field="PDM_LR_SEL" default="0" desc="This field selects the sampling edge of the PDM_CLK used by the 88PM812 to sample the PDM_SDA stream" />
+      <Bits range="2" field="RSVD" default="0" desc="RSVD" />
+      <Bits range="1" field="RSVD" default="0" desc="RSVD" />
       <Bits range="0" field="CLASSD_OC" default="0" desc="This field latches any over current event flagged by the class D amplifier, provided the CLASSD_EN field is set." />
     </RegisterInfo>
-    <RegisterInfo index="0x61" name="Class D Speaker Driver Register 1">
-      <Bits range="7:6" field="RSVD" default="11" desc="Reserved" />
-      <Bits range="5:4" field="PWM_MODE" default="00" desc="PWM mode" />
-      <Bits range="3:2" field="DIG_GAIN" default="11" type="Gain" desc="Digital gain.">
-        <Capbility value="0x00" decibel="0" />
-        <Capbility value="0x01" decibel="0" />
-        <Capbility value="0x02" decibel="3.52" />
-        <Capbility value="0x03" decibel="6" />
+    <RegisterInfo index="0x4A" name="Class D Register 3">
+      <Bits range="7:4" field="CLASSD_GAIN" default="0000" type="Gain" desc="Analog gain.">
+        <Capbility value="0x0" decibel="-6" />
+        <Capbility value="0x1" decibel="-6" />
+        <Capbility value="0x2" decibel="-6" />
+        <Capbility value="0x3" decibel="-5" />
+        <Capbility value="0x4" decibel="-4" />
+        <Capbility value="0x5" decibel="-3" />
+        <Capbility value="0x6" decibel="-2" />
+        <Capbility value="0x7" decibel="-1" />
+        <Capbility value="0x8" decibel="0" />
+        <Capbility value="0x9" decibel="1" />
+        <Capbility value="0xa" decibel="2" />
+        <Capbility value="0xb" decibel="3" />
+        <Capbility value="0xc" decibel="4" />
+        <Capbility value="0xd" decibel="5" />
+        <Capbility value="0xe" decibel="6" />
+        <Capbility value="0xf" decibel="6" />
       </Bits>
-      <Bits range="1" field="SSC_EN" default="1" desc="Spr. Spec. control 1-enable 0-disable." />
-      <Bits range="0" field="RFU_MUTE" default="0" desc="This field have two choice play path and mute path." />
+      <Bits range="3:2" field="RSVD" default="00" desc="Reserved." />
+      <Bits range="1" field="CLASSD_OC_EN" default="0" desc="Class D over current detector disable. 0 = over current detector disabled, 1 = over current detector enabled" />
+      <Bits range="0" field="CLASSD_EN_SPD" default="0" desc="Class D trianngle carrier wave frequency spread spectrum control. For test purposes only. 0 = feature enabled, 1 = feature disabled." />
     </RegisterInfo>
-    <RegisterInfo index="0x62" name="Class D Speaker Driver Register 2">
-      <Bits range="7" field="RSVD" default="0" desc="Reserved" />
-      <Bits range="6:5" field="ANA_GAIN" default="01" type="Gain" desc="Analog gain">
-        <Capbility value="0x00" decibel="-3" />
-        <Capbility value="0x01" decibel="0" />
-        <Capbility value="0x02" decibel="3" />
-        <Capbility value="0x03" decibel="6" />
-      </Bits>
-      <Bits range="4:2" field="AGC_RLS_TIME" default="100" desc="rls time." />
-      <Bits range="1" field="AGC_MSK_TIME" default="0" desc="msk time. default 20us" />
-      <Bits range="0" field="AGC_EN" default="0" desc="This field decide whether enable Automatic Gain Calibration." />
+    <RegisterInfo index="0x4B" name="Class D Register 4">
+      <Bits range="7:3" field="RSVD" default="00000" desc="Reserved" />
+      <Bits range="2" field="CLASSD_DIG_EN" default="0" desc="Class D digital circurity enable." />
+      <Bits range="1" field="CLASSD_LDOEN" default="0" desc="Class D LDO enable." />
+      <Bits range="0" field="CLASSD_EN" default="0" desc="Class D analog block enable." />
     </RegisterInfo>
   </Component>
 </MarvellAudioBasicElements>
