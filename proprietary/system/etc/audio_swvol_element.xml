@@ -16,9 +16,8 @@
         <Stream name="AUDIO_STREAM_DTMF"             value="8"   step="15"/>
         <Stream name="AUDIO_STREAM_TTS"              value="9"   step="15"/>
         <Stream name="AUDIO_STREAM_FM"               value="10"  step="15"/>
-        <Stream name="AUDIO_STREAM_VIDEO_CALL"       value="11"  step="5"/>
-        <!-- <Stream name="AUDIO_STREAM_VOICERECORDING"   value="11"  step="15"/> -->
-        <Stream name="AUDIO_STREAM_VIDEORECORDING"   value="12"  step="15"/>
+        <Stream name="AUDIO_STREAM_VIDEO_CALL"   value="11"  step="5"/>
+        <Stream name="AUDIO_STREAM_SEC_VOICE_COMMUNICATION"   value="12"  step="5"/>
         <!--voip stream is extended to distinguish with voice call,
              only visable by calibrator and hiden to audio framework -->
         <Stream name="AUDIO_STREAM_EXT_VOIP_WB"      value="1000" step="5"/>
@@ -44,32 +43,24 @@
         <Device name="AUDIO_DEVICE_OUT_AUX_DIGITAL"               value="0x400" />
         <Device name="AUDIO_DEVICE_OUT_ANLG_DOCK_HEADSET"         value="0x800" />
         <Device name="AUDIO_DEVICE_OUT_DGTL_DOCK_HEADSET"         value="0x1000" />
-        <Device name="AUDIO_DEVICE_OUT_USB_ACCESSORY"             value="0x2000" />
-        <Device name="AUDIO_DEVICE_OUT_USB_DEVICE"                value="0x4000" />
-        <Device name="AUDIO_DEVICE_OUT_REMOTE_SUBMIX"             value="0x8000" />
-        <Device name="AUDIO_DEVICE_OUT_FM_HEADPHONE"              value="0x10000" />
-        <Device name="AUDIO_DEVICE_OUT_FM_SPEAKER"                value="0x20000" />
-        <Device name="AUDIO_DEVICE_OUT_FM_TRANSMITTER"            value="0x40000" />
-        <Device name="AUDIO_DEVICE_OUT_DEFAULT"                   value="0x40000000" />
+        <Device name="AUDIO_DEVICE_OUT_FM_HEADPHONE"              value="0x2000" />
+        <Device name="AUDIO_DEVICE_OUT_FM_SPEAKER"                value="0x4000" />
+        <Device name="AUDIO_DEVICE_OUT_FM_TRANSMITTER"            value="0x8000" />
+        <Device name="AUDIO_DEVICE_OUT_DEFAULT"                   value="0x8000" />
         <!--Device name="AUDIO_DEVICE_OUT_ALL" -->
 
         <!--input devices-->
-        <Device name="AUDIO_DEVICE_IN_COMMUNICATION"              value="0x80000001" />
-        <Device name="AUDIO_DEVICE_IN_AMBIENT"                    value="0x80000002" />
-        <Device name="AUDIO_DEVICE_IN_BUILTIN_MIC"                value="0x80000004" />
-        <Device name="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET"      value="0x80000008" />
-        <Device name="AUDIO_DEVICE_IN_WIRED_HEADSET"              value="0x80000010" />
-        <Device name="AUDIO_DEVICE_IN_AUX_DIGITAL"                value="0x80000020" />
-        <Device name="AUDIO_DEVICE_IN_VOICE_CALL"                 value="0x80000040" />
-        <Device name="AUDIO_DEVICE_IN_BACK_MIC"                   value="0x80000080" />
-        <Device name="AUDIO_DEVICE_IN_REMOTE_SUBMIX"              value="0x80000100" />
-        <Device name="AUDIO_DEVICE_IN_ANLG_DOCK_HEADSET"          value="0x80000200" />
-        <Device name="AUDIO_DEVICE_IN_DGTL_DOCK_HEADSET"          value="0x80000400" />
-        <Device name="AUDIO_DEVICE_IN_USB_ACCESSORY"              value="0x80000800" />
-        <Device name="AUDIO_DEVICE_IN_USB_DEVICE"                 value="0x80001000" />
-        <Device name="AUDIO_DEVICE_IN_FMRADIO"                     value="0x80002000" />
-        <Device name="AUDIO_DEVICE_IN_VT_MIC"                    value="0x80004000" />
-        <Device name="AUDIO_DEVICE_IN_DEFAULT"                    value="0xc0000000" />
+        <Device name="AUDIO_DEVICE_IN_COMMUNICATION"              value="0x10000" />
+        <Device name="AUDIO_DEVICE_IN_AMBIENT"                    value="0x20000" />
+        <Device name="AUDIO_DEVICE_IN_BUILTIN_MIC"                value="0x40000" />
+        <Device name="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET"      value="0x80000" />
+        <Device name="AUDIO_DEVICE_IN_WIRED_HEADSET"              value="0x100000" />
+        <Device name="AUDIO_DEVICE_IN_AUX_DIGITAL"                value="0x200000" />
+        <Device name="AUDIO_DEVICE_IN_VOICE_CALL"                 value="0x400000" />
+        <Device name="AUDIO_DEVICE_IN_BACK_MIC"                   value="0x800000" />
+        <Device name="AUDIO_DEVICE_IN_VT_MIC"                     value="0x1000000" />
+        <Device name="AUDIO_DEVICE_IN_FMRADIO"                    value="0x2000000" />
+        <Device name="AUDIO_DEVICE_IN_DEFAULT"                    value="0x80000000" />
         <!--Device name="DEVICE_IN_ALL"-->
     </DeviceList>
 
@@ -87,8 +78,10 @@
         <Format name=".pcm"       value="9"  />
         <Format name=".amr_nb"    value="10" />
         <Format name=".tone"      value="11" />
-        <Format name=".3gp"       value="12" />
-    <Format name=".m4a"       value="13" />
+        <Format name=".3gpp"      value="12" />
+        <Format name=".3gp"       value="13" />
+	<Format name=".wma"       value="14" />
+        <Format name=".m4a"       value="15" />
     </FormatList>
 
 

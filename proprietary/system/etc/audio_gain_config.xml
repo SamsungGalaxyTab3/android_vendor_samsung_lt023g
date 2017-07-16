@@ -5,14 +5,9 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="HiFiPlayToSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="HiFiPlayToSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="HiFiPlayToSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="HiFiPlayToStereoSPKR" component="ELBA">
@@ -26,14 +21,9 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="HiFiPlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="HiFiPlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="HiFiPlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="HiFiPlayToHP" component="ELBA">
@@ -54,10 +44,14 @@
     </AudioPath>
 
     <AudioPath alias="HiFiPlayToSPKR" identifier="VoipPlayToSPKR" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToSPKR" identifier="VoipPlayToSPKR" component="USTICA"/>
     <AudioPath alias="HiFiPlayToSPKR" identifier="VTPlayToSPKR" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToSPKR" identifier="VTPlayToSPKR" component="USTICA"/>
 
     <AudioPath alias="HiFiPlayToStereoSPKR" identifier="VoipPlayToStereoSPKR" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToStereoSPKR" identifier="VoipPlayToStereoSPKR" component="USTICA"/>
     <AudioPath alias="HiFiPlayToStereoSPKR" identifier="VTPlayToStereoSPKR" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToStereoSPKR" identifier="VTPlayToStereoSPKR" component="USTICA"/>
 
     <AudioPath alias="HiFiPlayToHP" identifier="VoipPlayToHP" component="ELBA"/>
     <AudioPath alias="HiFiPlayToHP" identifier="VTPlayToHP" component="ELBA"/>
@@ -97,22 +91,27 @@
             <Value volume="100">0xc3</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="HiFiPlayToSPKRAndHP" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="HiFiPlayToSPKRAndHP" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="HiFiPlayToSPKRAndHP" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x07</Value>
+            <Value volume="14">0x07</Value>
+            <Value volume="29">0x07</Value>
+            <Value volume="43">0x07</Value>
+            <Value volume="57">0x07</Value>
+            <Value volume="71">0x07</Value>
+            <Value volume="86">0x07</Value>
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
 
     <AudioPath alias="HiFiPlayToSPKRAndHP" identifier="VoipPlayToSPKRAndHP" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToSPKRAndHP" identifier="VoipPlayToSPKRAndHP" component="USTICA"/>
     <AudioPath alias="HiFiPlayToSPKRAndHP" identifier="VTPlayToSPKRAndHP" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToSPKRAndHP" identifier="VTPlayToSPKRAndHP" component="USTICA"/>
     <AudioPath alias="HiFiRecordFromHsMic" identifier="VTWBRecordFromHsMic" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromHsMic" identifier="VTNBRecordFromHsMic" component="ELBA"/>
     <AudioPath alias="HiFiPlayToStereoSPKRAndHP" identifier="VTPlayToStereoSPKRAndHP" component="ELBA"/>
+    <AudioPath alias="HiFiPlayToStereoSPKRAndHP" identifier="VTPlayToStereoSPKRAndHP" component="USTICA"/>
 
     <AudioPath identifier="HiFiPlayToStereoSPKRAndHP" component="ELBA">
         <Gain name="VOL_SEL_1[7:0]">
@@ -166,14 +165,16 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="HiFiPlayToStereoSPKRAndHP" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="HiFiPlayToStereoSPKRAndHP" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="HiFiPlayToStereoSPKRAndHP" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x07</Value>
+            <Value volume="14">0x07</Value>
+            <Value volume="29">0x07</Value>
+            <Value volume="43">0x07</Value>
+            <Value volume="57">0x07</Value>
+            <Value volume="71">0x07</Value>
+            <Value volume="86">0x07</Value>
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
 
@@ -220,7 +221,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -280,7 +281,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -304,7 +305,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -323,7 +324,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -342,7 +343,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -361,7 +362,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -380,7 +381,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -399,7 +400,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -422,7 +423,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -444,7 +445,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -466,7 +467,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -480,14 +481,14 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="VoicePlayToSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="VoicePlayToSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="VoicePlayToSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x07</Value>
+            <Value volume="20">0x07</Value>
+            <Value volume="40">0x07</Value>
+            <Value volume="60">0x07</Value>
+            <Value volume="80">0x07</Value>
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="VoicePlayToSPKR" component="MODEM">
@@ -515,7 +516,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -550,14 +551,14 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="VoicePlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="VoicePlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="VoicePlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x07</Value>
+            <Value volume="20">0x07</Value>
+            <Value volume="40">0x07</Value>
+            <Value volume="60">0x07</Value>
+            <Value volume="80">0x07</Value>
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="VoicePlayToStereoSPKR" component="MODEM">
@@ -585,7 +586,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -637,7 +638,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -697,7 +698,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -724,7 +725,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -771,7 +772,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -795,7 +796,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -814,7 +815,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -833,7 +834,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -852,7 +853,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -871,7 +872,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -890,7 +891,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -913,7 +914,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -935,7 +936,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -957,7 +958,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -972,14 +973,14 @@
             <Value volume="100">0xba</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="VoiceLoopPlayToSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="VoiceLoopPlayToSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="VoiceLoopPlayToSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x08</Value>
+            <Value volume="20">0x08</Value>
+            <Value volume="40">0x08</Value>
+            <Value volume="60">0x08</Value>
+            <Value volume="80">0x08</Value>
+            <Value volume="100">0x08</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="VoiceLoopPlayToSPKR" component="MODEM">
@@ -1007,7 +1008,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -1042,14 +1043,14 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="VoiceLoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="VoiceLoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="VoiceLoopPlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="0">0x07</Value>
+            <Value volume="20">0x07</Value>
+            <Value volume="40">0x07</Value>
+            <Value volume="60">0x07</Value>
+            <Value volume="80">0x07</Value>
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="VoiceLoopPlayToStereoSPKR" component="MODEM">
@@ -1077,7 +1078,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -1129,7 +1130,7 @@
             <Value volume="80">0x28</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="0">0x23</Value>
             <Value volume="20">0x25</Value>
             <Value volume="40">0x27</Value>
@@ -1156,7 +1157,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2F</Value>
         </Gain>
     </AudioPath>
@@ -1183,7 +1184,12 @@
     <AudioPath alias="HiFiRecordFromMic1"    identifier="HiFiRecognitionRecordFromMic1" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromMic2"    identifier="HiFiRecognitionRecordFromMic2" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromHsMic"   identifier="HiFiRecognitionRecordFromHsMic" component="ELBA"/>
-
+    <AudioPath alias="HiFiRecordFromMic1" identifier="HiFiRecognitionRecordSecFromMic1" component="ELBA"/>
+    <AudioPath alias="HiFiRecordFromMic1" identifier="HiFiRecognitionRecordDrivingFromMic1" component="ELBA"/>
+    <AudioPath alias="HiFiRecordFromMic2" identifier="HiFiRecognitionRecordSecFromMic2" component="ELBA"/>
+    <AudioPath alias="HiFiRecordFromMic2" identifier="HiFiRecognitionRecordDrivingFromMic2" component="ELBA"/>
+    <AudioPath alias="HiFiRecordFromHsMic" identifier="HiFiRecognitionRecordSecFromHsMic" component="ELBA"/>
+    <AudioPath alias="HiFiRecordFromHsMic" identifier="HiFiRecognitionRecordDrivingFromHsMic" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromDualMic" identifier="VoipWBRecordFromDualMic" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromDualMic" identifier="VoipNBRecordFromDualMic" component="ELBA"/>
     <AudioPath alias="HiFiRecordFromDualMic" identifier="VoipWBRecordFromDualMic(Speaker Mode)" component="ELBA"/>
@@ -1280,14 +1286,9 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="FMPlayToSPKRI2S" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="FMPlayToSPKRI2S" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="FMPlayToSPKRI2S" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="FMPlayToStereoSPKRI2S" component="ELBA">
@@ -1331,14 +1332,9 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="FMPlayToStereoSPKRI2S" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="FMPlayToStereoSPKRI2S" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="FMPlayToStereoSPKRI2S" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="HiFiRecordFromFMI2S" component="ELBA">
@@ -1371,119 +1367,109 @@
         <Gain name="VOL_SEL_1[7:0]">
             <Value volume="0">0x1</Value>
             <Value volume="7">0x30</Value>
-            <Value volume="13">0x38</Value>
-            <Value volume="20">0x40</Value>
-            <Value volume="27">0x48</Value>
-            <Value volume="34">0x50</Value>
-            <Value volume="40">0x58</Value>
-            <Value volume="47">0x60</Value>
-            <Value volume="53">0x68</Value>
-            <Value volume="60">0x70</Value>
-            <Value volume="66">0x78</Value>
-            <Value volume="73">0x80</Value>
-            <Value volume="79">0x88</Value>
-            <Value volume="86">0x90</Value>
-            <Value volume="93">0x98</Value>
-            <Value volume="100">0xa0</Value>
+            <Value volume="13">0x40</Value>
+            <Value volume="20">0x50</Value>
+            <Value volume="27">0x55</Value>
+            <Value volume="34">0x60</Value>
+            <Value volume="40">0x70</Value>
+            <Value volume="47">0x75</Value>
+            <Value volume="53">0x80</Value>
+            <Value volume="60">0x90</Value>
+            <Value volume="66">0x98</Value>
+            <Value volume="73">0xa0</Value>
+            <Value volume="79">0xb0</Value>
+            <Value volume="86">0xb8</Value>
+            <Value volume="93">0xc0</Value>
+            <Value volume="100">0xd0</Value>
         </Gain>
         <Gain name="VOL_SEL_2[7:0]">
             <Value volume="0">0x1</Value>
             <Value volume="7">0x30</Value>
-            <Value volume="13">0x38</Value>
-            <Value volume="20">0x40</Value>
-            <Value volume="27">0x48</Value>
-            <Value volume="34">0x50</Value>
-            <Value volume="40">0x58</Value>
-            <Value volume="47">0x60</Value>
-            <Value volume="53">0x68</Value>
-            <Value volume="60">0x70</Value>
-            <Value volume="66">0x78</Value>
-            <Value volume="73">0x80</Value>
-            <Value volume="79">0x88</Value>
-            <Value volume="86">0x90</Value>
-            <Value volume="93">0x98</Value>
-            <Value volume="100">0xa0</Value>
+            <Value volume="13">0x40</Value>
+            <Value volume="20">0x50</Value>
+            <Value volume="27">0x55</Value>
+            <Value volume="34">0x60</Value>
+            <Value volume="40">0x70</Value>
+            <Value volume="47">0x75</Value>
+            <Value volume="53">0x80</Value>
+            <Value volume="60">0x90</Value>
+            <Value volume="66">0x98</Value>
+            <Value volume="73">0xa0</Value>
+            <Value volume="79">0xb0</Value>
+            <Value volume="86">0xb8</Value>
+            <Value volume="93">0xc0</Value>
+            <Value volume="100">0xd0</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="FMPlayToSPKRAnalog" component="ELBA">
         <Gain name="VOL_SEL_3[7:0]">
             <Value volume="0">0x1</Value>
             <Value volume="7">0x30</Value>
-            <Value volume="13">0x38</Value>
-            <Value volume="20">0x40</Value>
-            <Value volume="27">0x48</Value>
-            <Value volume="34">0x50</Value>
-            <Value volume="40">0x58</Value>
-            <Value volume="47">0x60</Value>
-            <Value volume="53">0x68</Value>
-            <Value volume="60">0x70</Value>
-            <Value volume="66">0x78</Value>
-            <Value volume="73">0x80</Value>
-            <Value volume="79">0x88</Value>
-            <Value volume="86">0x90</Value>
-            <Value volume="93">0x98</Value>
-            <Value volume="100">0xa0</Value>
+            <Value volume="13">0x40</Value>
+            <Value volume="20">0x50</Value>
+            <Value volume="27">0x55</Value>
+            <Value volume="34">0x60</Value>
+            <Value volume="40">0x70</Value>
+            <Value volume="47">0x75</Value>
+            <Value volume="53">0x80</Value>
+            <Value volume="60">0x90</Value>
+            <Value volume="66">0x98</Value>
+            <Value volume="73">0xa0</Value>
+            <Value volume="79">0xb0</Value>
+            <Value volume="86">0xb8</Value>
+            <Value volume="93">0xc0</Value>
+            <Value volume="100">0xd0</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="FMPlayToSPKRAnalog" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="FMPlayToSPKRAnalog" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="FMPlayToSPKRAnalog" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="FMPlayToStereoSPKRAnalog" component="ELBA">
         <Gain name="VOL_SEL_3[7:0]">
             <Value volume="0">0x1</Value>
             <Value volume="7">0x30</Value>
-            <Value volume="13">0x38</Value>
-            <Value volume="20">0x40</Value>
-            <Value volume="27">0x48</Value>
-            <Value volume="34">0x50</Value>
-            <Value volume="40">0x58</Value>
-            <Value volume="47">0x60</Value>
-            <Value volume="53">0x68</Value>
-            <Value volume="60">0x70</Value>
-            <Value volume="66">0x78</Value>
-            <Value volume="73">0x80</Value>
-            <Value volume="79">0x88</Value>
-            <Value volume="86">0x90</Value>
-            <Value volume="93">0x98</Value>
-            <Value volume="100">0xa0</Value>
+            <Value volume="13">0x40</Value>
+            <Value volume="20">0x50</Value>
+            <Value volume="27">0x55</Value>
+            <Value volume="34">0x60</Value>
+            <Value volume="40">0x70</Value>
+            <Value volume="47">0x75</Value>
+            <Value volume="53">0x80</Value>
+            <Value volume="60">0x90</Value>
+            <Value volume="66">0x98</Value>
+            <Value volume="73">0xa0</Value>
+            <Value volume="79">0xb0</Value>
+            <Value volume="86">0xb8</Value>
+            <Value volume="93">0xc0</Value>
+            <Value volume="100">0xd0</Value>
         </Gain>
         <Gain name="VOL_SEL_4[7:0]">
             <Value volume="0">0x1</Value>
             <Value volume="7">0x30</Value>
-            <Value volume="13">0x38</Value>
-            <Value volume="20">0x40</Value>
-            <Value volume="27">0x48</Value>
-            <Value volume="34">0x50</Value>
-            <Value volume="40">0x58</Value>
-            <Value volume="47">0x60</Value>
-            <Value volume="53">0x68</Value>
-            <Value volume="60">0x70</Value>
-            <Value volume="66">0x78</Value>
-            <Value volume="73">0x80</Value>
-            <Value volume="79">0x88</Value>
-            <Value volume="86">0x90</Value>
-            <Value volume="93">0x98</Value>
-            <Value volume="100">0xa0</Value>
+            <Value volume="13">0x40</Value>
+            <Value volume="20">0x50</Value>
+            <Value volume="27">0x55</Value>
+            <Value volume="34">0x60</Value>
+            <Value volume="40">0x70</Value>
+            <Value volume="47">0x75</Value>
+            <Value volume="53">0x80</Value>
+            <Value volume="60">0x90</Value>
+            <Value volume="66">0x98</Value>
+            <Value volume="73">0xa0</Value>
+            <Value volume="79">0xb0</Value>
+            <Value volume="86">0xb8</Value>
+            <Value volume="93">0xc0</Value>
+            <Value volume="100">0xd0</Value>
         </Gain>
         <Gain name="PDM_CTRL_PATT_LSB[7:0]">
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="FMPlayToStereoSPKRAnalog" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="FMPlayToStereoSPKRAnalog" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="FMPlayToStereoSPKRAnalog" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="HiFiRecordFromFMAnalog" component="ELBA">
@@ -1560,7 +1546,7 @@
             <Value volume="90">0x29</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="10">0x24</Value>
             <Value volume="20">0x25</Value>
             <Value volume="30">0x26</Value>
@@ -1610,7 +1596,7 @@
             <Value volume="90">0x29</Value>
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="10">0x24</Value>
             <Value volume="20">0x25</Value>
             <Value volume="30">0x26</Value>
@@ -1633,7 +1619,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2a</Value>
         </Gain>
     </AudioPath>
@@ -1648,7 +1634,7 @@
         <Gain name="DIGITAL_GAIN_WB">
             <Value volume="100">0x2a</Value>
         </Gain>
-        <Gain name="DIGITAL_GAIN_WB_EXTRA">
+        <Gain name="DIGITAL_GAIN_EXTRA_WB">
             <Value volume="100">0x2a</Value>
         </Gain>
     </AudioPath>
@@ -1688,7 +1674,7 @@
             <Value volume="100">0x1</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic1LoopPlayToSPKR" component="ELBA">
+    <AudioPath identifier="Mic1LoopPlayToSPRK" component="ELBA">
         <Gain name="MICPGA1_GAIN[4:0]">
             <Value volume="100">0x14</Value>
         </Gain>
@@ -1696,14 +1682,9 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic1LoopPlayToSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="Mic1LoopPlayToSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="Mic1LoopPlayToSPRK" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="Mic1LoopPlayToStereoSPKR" component="ELBA">
@@ -1720,14 +1701,9 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic1LoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="Mic1LoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="Mic1LoopPlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="Mic2LoopPlayToEarphone" component="ELBA">
@@ -1741,7 +1717,7 @@
             <Value volume="100">0xb4</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic2LoopPlayToSPKR" component="ELBA">
+    <AudioPath identifier="Mic2LoopPlayToSPRK" component="ELBA">
         <Gain name="MICPGA2_GAIN[4:0]">
             <Value volume="100">0x14</Value>
         </Gain>
@@ -1749,14 +1725,9 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic2LoopPlayToSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="Mic2LoopPlayToSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="Mic2LoopPlayToSPRK" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="Mic2LoopPlayToStereoSPKR" component="ELBA">
@@ -1773,14 +1744,9 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="Mic2LoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="Mic2LoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="Mic2LoopPlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x08</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="DualMicLoopPlayToEarphone" component="ELBA">
@@ -1808,14 +1774,9 @@
             <Value volume="100">0xb7</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="DualMicLoopPlayToSPK" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="DualMicLoopPlayToSPK" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="DualMicLoopPlayToSPK" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="DualMicLoopPlayToStereoSPKR" component="ELBA">
@@ -1835,14 +1796,9 @@
             <Value volume="100">0xd8</Value>
         </Gain>
     </AudioPath>
-    <AudioPath identifier="DualMicLoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="ANA_GAIN">
-            <Value volume="100">0x01</Value>
-        </Gain>
-    </AudioPath>
-    <AudioPath identifier="DualMicLoopPlayToStereoSPKR" component="PMIC">
-        <Gain name="DIG_GAIN">
-            <Value volume="100">0x03</Value>
+    <AudioPath identifier="DualMicLoopPlayToStereoSPKR" component="USTICA">
+        <Gain name="CLASSD_GAIN">
+            <Value volume="100">0x07</Value>
         </Gain>
     </AudioPath>
     <AudioPath identifier="HiFiPlayToDock" component="ELBA">

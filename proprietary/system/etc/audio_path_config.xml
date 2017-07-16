@@ -4346,6 +4346,8 @@
                 <Register field="SAI1_SINGLE_FSYN" value="0"/>
                 <Register field="SAI1_FSYN_RATE[3:0]" value="1001"/>
                 <Register field="SAI1_BCLK_OSR[2:0]" value="1"/>
+                <!-- Register 0x30 0xf -->
+                <Register field="SAI1_WLEN[1:0]" value="1"/>
                 <!-- Register 0x32 0x04 -->
                 <Register field="SAI1_PD_ON_CH0" value="0"/>
                 <Register field="SDO1_HIZ_DIS" value="0"/>
@@ -4357,9 +4359,6 @@
                 <Register field="SRC1O_EN" value="1"/>
                 <Register field="SRC1I_EN" value="1"/>
                 <Register field="SAI1_EN" value="1"/>
-				<!-- Register 0x3c 0x01 -->
-                <Register field="SRC1O_CH_SEL_1[3:0]" value="0"/>
-                <Register field="SRC1O_CH_SEL_2[3:0]" value="0"/>
                 <!-- Register 0x12 -->
                 <Register field="MICPGA1_GAIN[4:0]"/>
                 <!-- Register 0x50 0x07 -->
@@ -4368,6 +4367,8 @@
                 <Register field="PRC_EN" value="1"/>
                 <Register field="DWS_EN" value="1"/>
                 <Register field="OVS_EN" value="1"/>
+                <!-- Register 0x55 0x20 -->
+                <Register field="RAMP_TIME_SEL[3:0]" value="10"/>
                 <!-- Register 0x52 0x68 -->
                 <Register field="VOL_CH_SEL_1[3:0]" value="1110"/>
                 <Register field="VOL_CH_SEL_2[3:0]" value="1110"/>
@@ -4417,15 +4418,13 @@
                 <Register field="MIC_CLK_PD" value="1"/>
                 <Register field="ADC12_DIV3" value="0"/>
                 <!-- Register 0x30 0xf -->
-				<Register field="SAI1_R_ALIGN" value="0"/>
-                <Register field="SAI1_WLEN[1:0]" value="0"/>
-                <Register field="SAI1_DELAY_MODE" value="0"/>
-                <Register field="SAI1_I2S_MODE" value="0"/>
                 <Register field="SAI1_MASTER" value="0"/>
                 <!-- Register 0x31 0x49 -->
                 <Register field="SAI1_SINGLE_FSYN" value="0"/>
                 <Register field="SAI1_FSYN_RATE[3:0]" value="0"/>
                 <Register field="SAI1_BCLK_OSR[2:0]" value="0"/>
+                <!-- Register 0x30 0x0 -->
+                <Register field="SAI1_WLEN[1:0]" value="0"/>
                 <!-- Register 0x32 0x08 -->
                 <Register field="SAI1_PD_ON_CH0" value="0"/>
                 <Register field="SDO1_HIZ_DIS" value="0"/>
@@ -5489,9 +5488,6 @@
                 <Register field="SRC1O_EN" value="1"/>
                 <Register field="SRC1I_EN" value="1"/>
                 <Register field="SAI1_EN" value="1"/>
-                <!-- Register 0x3c 0x01 -->
-                <Register field="SRC1O_CH_SEL_1[3:0]" value="1"/>
-                <Register field="SRC1O_CH_SEL_2[3:0]" value="1"/>
                 <!-- Register 0x13 -->
                 <Register field="MICPGA2_GAIN[4:0]"/>
              </AudioComponent>
@@ -5511,8 +5507,7 @@
             </AudioComponent>
             <AudioComponent control_protocol="I2C" identifier="ELBA">
                 <!-- Register 0x55 0x20 -->
-                <Register field="RAMP_TIME_SEL[3:0]" value="1"/>
-                <Register field="AUTOMUTE_MODE_PDM[1:0]" value="0"/>
+                <Register field="RAMP_TIME_SEL[3:0]" value="10"/>
                 <!-- Register 0x58 0x00 -->
                 <Register field="VOL_SEL_3[7:0]" value="0"/>
                 <!-- Register 0x59 0x00 -->
@@ -5535,7 +5530,7 @@
                 <Register field="PDM_CTRL_REP[2:0]" value="111"/>
                 <Register field="PDM_CTRL_16BIT_EN" value="0"/>
                 <Register field="PDM_CTRL_DIS1" value="1"/>
-                <Register field="PDM_CTRL_DIS2" value="1"/>
+                <Register field="PDM_CTRL_DIS2" value="0"/>
                 <!-- Register 0x25 0xD8 -->
                 <Register field="PDM_CTRL_PATT_LSB[7:0]"/>
                 <!-- Register 0x23 0x5A -->
@@ -5625,10 +5620,6 @@
                 <Register field="PDM1_DIS_MODE[1:0]" value="0"/>
                 <Register field="PDM1_EN" value="0"/>
                 <!-- Register 0x30 0xf -->
-                <Register field="SAI1_R_ALIGN" value="0"/>
-                <Register field="SAI1_WLEN[1:0]" value="0"/>
-                <Register field="SAI1_DELAY_MODE" value="0"/>
-                <Register field="SAI1_I2S_MODE" value="0"/>
                 <Register field="SAI1_MASTER" value="0"/>
                 <!-- Register 0x31 0x49 -->
                 <Register field="SAI1_SINGLE_FSYN" value="0"/>
@@ -5644,9 +5635,8 @@
                 <!-- Register 0x53 0x77-->
                 <Register field="VOL_CH_SEL_3[3:0]" value="0"/>
                 <Register field="VOL_CH_SEL_4[3:0]" value="1"/>
-                <!-- Register 0x55 0x20 -->
+                <!-- Register 0x55 0x0 -->
                 <Register field="RAMP_TIME_SEL[3:0]" value="0"/>
-                <Register field="AUTOMUTE_MODE_PDM[1:0]" value="0"/>
                 <!-- Register 0x23 0x0 -->
                 <Register field="PDM_CTRL_GO" value="0"/>
                 <Register field="PDM_CTRL_REP[2:0]" value="0"/>

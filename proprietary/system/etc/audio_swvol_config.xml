@@ -14,6 +14,14 @@
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
+            <Device identifier="AUDIO_DEVICE_OUT_SPEAKER">
+                <Format identifier=".DEFAULT"> <!--default format-->
+                </Format>
+            </Device>
+            <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
+                <Format identifier=".DEFAULT"> <!--default format-->
+                </Format>
+            </Device>
         </Stream>
         <Stream identifier="AUDIO_STREAM_EXT_VOIP_WB"> <!--optional: range-->
             <Device identifier="AUDIO_DEVICE_OUT_EARPIECE">
@@ -29,10 +37,6 @@
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-	    <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
@@ -54,10 +58,6 @@
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
-	    <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
         </Stream>
         <Stream identifier="AUDIO_STREAM_EXT_VT_WB"> <!--optional: range-->
             <Device identifier="AUDIO_DEVICE_OUT_EARPIECE">
@@ -73,10 +73,6 @@
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-	    <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
@@ -98,10 +94,6 @@
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
-	    <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
         </Stream>
 
         <Stream identifier="AUDIO_STREAM_SYSTEM">
@@ -120,8 +112,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-		<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -137,8 +127,6 @@
                 <Format identifier=".amr">
                 </Format>
                 <Format identifier=".wav">
-                </Format>
-		<Format identifier=".m4a">
                 </Format>
             </Device>
         </Stream>
@@ -158,8 +146,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-				<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -175,8 +161,6 @@
                 <Format identifier=".amr">
                 </Format>
                 <Format identifier=".wav">
-                </Format>
-				<Format identifier=".m4a">
                 </Format>
             </Device>
             <CombinedDevices>
@@ -195,8 +179,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -212,8 +194,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -233,8 +213,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -250,8 +228,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -280,7 +256,11 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
+                </Format>
+                <Format identifier=".m4a">
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
@@ -306,7 +286,9 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
@@ -332,7 +314,9 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP">
@@ -358,7 +342,9 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES">
@@ -384,7 +370,9 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER">
@@ -410,7 +398,9 @@
                 </Format>
                 <Format identifier=".tone">
                 </Format>
-				<Format identifier=".m4a">
+                <Format identifier=".3gp">
+                </Format>
+		<Format identifier=".wma">
                 </Format>
             </Device>
         </Stream>
@@ -430,8 +420,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-				<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -447,8 +435,6 @@
                 <Format identifier=".amr">
                 </Format>
                 <Format identifier=".wav">
-                </Format>
-				<Format identifier=".m4a">
                 </Format>
             </Device>
             <CombinedDevices>
@@ -467,8 +453,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -484,8 +468,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -505,8 +487,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -522,8 +502,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -544,8 +522,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-				<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -561,8 +537,6 @@
                 <Format identifier=".amr">
                 </Format>
                 <Format identifier=".wav">
-                </Format>
-				<Format identifier=".m4a">
                 </Format>
             </Device>
             <CombinedDevices>
@@ -581,8 +555,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -598,8 +570,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -619,8 +589,6 @@
                     </Format>
                     <Format identifier=".wav">
                     </Format>
-					<Format identifier=".m4a">
-                    </Format>
                 </Device>
                 <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
                     <Format identifier=".DEFAULT"> <!--default format-->
@@ -636,8 +604,6 @@
                     <Format identifier=".amr">
                     </Format>
                     <Format identifier=".wav">
-                    </Format>
-					<Format identifier=".m4a">
                     </Format>
                 </Device>
             </CombinedDevices>
@@ -668,8 +634,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-				<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -686,8 +650,6 @@
                 </Format>
                 <Format identifier=".wav">
                 </Format>
-				<Format identifier=".m4a">
-                </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_SPEAKER">
                 <Format identifier=".DEFAULT"> <!--default format-->
@@ -703,8 +665,6 @@
                 <Format identifier=".amr">
                 </Format>
                 <Format identifier=".wav">
-                </Format>
-				<Format identifier=".m4a">
                 </Format>
             </Device>
         </Stream>
@@ -734,28 +694,6 @@
                 </Format>
             </Device>
             <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-        </Stream>
-	    <Stream identifier="AUDIO_STREAM_VIDEO_CALL">
-            <Device identifier="AUDIO_DEVICE_OUT_EARPIECE">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-            <Device identifier="AUDIO_DEVICE_OUT_SPEAKER">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-            <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADSET">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-            <Device identifier="AUDIO_DEVICE_OUT_WIRED_HEADPHONE">
-                <Format identifier=".DEFAULT"> <!--default format-->
-                </Format>
-            </Device>
-	    <Device identifier="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET">
                 <Format identifier=".DEFAULT"> <!--default format-->
                 </Format>
             </Device>
